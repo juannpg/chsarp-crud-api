@@ -9,9 +9,19 @@ namespace Models
     public int Id { get; set; }
     
     [Column("name")]
-    public string Name { get; set; }
+    public required string Name { get; set; }
 
     [Column("email")]
-    public string Email { get; set; }
+    public required string Email { get; set; }
+  }
+
+  [Table("quotes")]
+  public class Quote
+  {
+    [Column("id")]
+    public int Id { get; set; }
+
+    [Column("content")]
+    public required string Content { get; set; }
   }
 }

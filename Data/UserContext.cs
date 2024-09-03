@@ -3,12 +3,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Data
 {
-  public class UserContext : DbContext
+  public class ApplicationDbContext : DbContext
   {
-    public UserContext(DbContextOptions<UserContext> options) : base(options)
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
     }
 
     public DbSet<User> Users { get; set; }
+    public DbSet<Quote> Quotes { get; set; }
   }
 }
