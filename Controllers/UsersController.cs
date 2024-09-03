@@ -34,6 +34,6 @@ public class UsersController : ControllerBase
     _context.Users.Add(user);
     await _context.SaveChangesAsync();
 
-    return CreatedAtAction("GetUserWithId", new { id = user.Id }, user);
+    return user;
   }
 }
